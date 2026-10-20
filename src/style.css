@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #263238;
+  line-height: 1.6;
+  background-color: #f7f9fb;
+}
+
+.cabecalho {
+  padding: 32px 20px;
+  background-color: #174a75;
+  color: #ffffff;
+  text-align: center;
+}
+
+.cabecalho h1 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.cabecalho p {
+  margin-bottom: 0;
+}
+
+.conteudo {
+  width: min(100% - 40px, 1100px);
+  margin: 40px auto;
+  min-height: 55vh;
+}
+
+.apresentacao {
+  margin-bottom: 28px;
+}
+
+.apresentacao h2 {
+  margin-bottom: 8px;
+}
+
+.apresentacao p {
+  margin-top: 0;
+  color: #52616b;
+}
+
+.cartoes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.cartao {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #dce3e8;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 5%);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.cartao:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 10%);
+}
+
+.cartao:focus-visible {
+  outline: 3px solid #2878b8;
+  outline-offset: 4px;
+}
+
+.cartao-imagem {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background-color: #e7edf2;
+}
+
+.cartao-conteudo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+}
+
+.cartao-conteudo h3 {
+  margin: 0 0 12px;
+  color: #174a75;
+  font-size: 1.3rem;
+}
+
+.cartao-conteudo p {
+  margin: 0 0 20px;
+  color: #52616b;
+}
+
+.cartao-link {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: auto;
+  color: #1769aa;
+  font-weight: 700;
+}
+
+.rodape {
+  padding: 20px;
+  background-color: #e9eef2;
+  text-align: center;
+}
+
+.rodape p {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .cartoes {
+    grid-template-columns: 1fr;
+  }
+
+  .cartao-imagem {
+    height: 200px;
+  }
+
+  .cartao-conteudo {
+    padding: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cartao {
+    transition: none;
+  }
+
+  .cartao:hover {
+    transform: none;
+  }
+}
+
+.navegacao {
+  margin-bottom: 24px;
+}
+
+.navegacao a {
+  color: #1769aa;
+  text-decoration: none;
+}
+
+.navegacao a:hover {
+  text-decoration: underline;
+}
+
+.cartao {
+  height: 100%;
+}
+
+.cartao-imagem {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+}
+
+.cartao-link {
+  margin-top: auto;
+}
+
+@media (max-width: 700px) {
+  .cartoes {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Seção de materiais para download */
+.secao-materiais {
+  margin-top: 40px;
+  margin-bottom: 48px;
+}
+
+/* Seção de referências bibliográficas */
+.secao-referencias {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid #dce3e8;
+}
+
+.lista-referencias {
+  padding: 24px;
+  background-color: #fff;
+  border: 1px solid #dce3e8;
+  border-radius: 12px;
+}
+
+.lista-referencias p {
+  margin: 0 0 20px;
+  color: #37474f;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.lista-referencias p:last-child {
+  margin-bottom: 0;
+}
+
+/* Mantém os cartões de PDF alinhados */
+.secao-materiais .cartao {
+  height: 100%;
+}
