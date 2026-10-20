@@ -1,4 +1,4 @@
-git add .name: Publicar site EduES no GitHub Pages
+name: Publicar site EduES no GitHub Pages
 
 on:
   push:
